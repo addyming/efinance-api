@@ -1,0 +1,92 @@
+import "../base.api"
+
+type (
+    // The response data of em stock watch information | EmStockWatch信息
+    EmStockWatchInfo {
+        Id        *int32    `json:"id,optional"`
+
+        // StockWatchCode
+        StockWatchCode  *string `json:"stockWatchCode,optional"`
+
+        // StockWatchName
+        StockWatchName  *string `json:"stockWatchName,optional"`
+
+        // StockWatchUpPrice
+        StockWatchUpPrice  *string `json:"stockWatchUpPrice,optional"`
+
+        // StockWatchFallPrice
+        StockWatchFallPrice  *string `json:"stockWatchFallPrice,optional"`
+
+        // StockWatchUpChange
+        StockWatchUpChange  *string `json:"stockWatchUpChange,optional"`
+
+        // StockWatchFallChange
+        StockWatchFallChange  *string `json:"stockWatchFallChange,optional"`
+    }
+
+    // The response data of em stock watch list | EmStockWatch信息列表数据
+    EmStockWatchListResp {
+        BaseDataInfo
+
+        // EmStockWatch list data | EmStockWatch信息列表数据
+        Data EmStockWatchListInfo `json:"data"`
+    }
+
+    // The em stock watch list data | EmStockWatch信息列表数据
+    EmStockWatchListInfo {
+        BaseListInfo
+
+        // The em stock watch list data | EmStockWatch信息列表数据
+        Data  []EmStockWatchInfo  `json:"data"`
+    }
+
+    // Get em stock watch list request params | EmStockWatch列表请求参数
+    EmStockWatchListReq {
+        PageInfo
+
+        // StockWatchCode
+        StockWatchCode  *string `json:"stockWatchCode,optional"`
+
+        // StockWatchName
+        StockWatchName  *string `json:"stockWatchName,optional"`
+
+        // StockWatchUpPrice
+        StockWatchUpPrice  *string `json:"stockWatchUpPrice,optional"`
+    }
+
+    // The em stock watch information response | EmStockWatch信息返回体
+    EmStockWatchInfoResp {
+        BaseDataInfo
+
+        // The em stock watch information | EmStockWatch信息数据
+        Data EmStockWatchInfo `json:"data"`
+    }
+)
+
+@server(
+    jwt: Auth
+    group: emstockwatch
+    middleware: Authority
+)
+
+service Efinance {
+    // Create em stock watch information | 创建EmStockWatch信息
+    @handler createEmStockWatch
+    post /em_stock_watch/create (EmStockWatchInfo) returns (BaseMsgResp)
+
+    // Update em stock watch information | 更新EmStockWatch信息
+    @handler updateEmStockWatch
+    post /em_stock_watch/update (EmStockWatchInfo) returns (BaseMsgResp)
+
+    // Delete em stock watch information | 删除EmStockWatch信息
+    @handler deleteEmStockWatch
+    post /em_stock_watch/delete (IDsInt32Req) returns (BaseMsgResp)
+
+    // Get em stock watch list | 获取EmStockWatch信息列表
+    @handler getEmStockWatchList
+    post /em_stock_watch/list (EmStockWatchListReq) returns (EmStockWatchListResp)
+
+    // Get em stock watch by ID | 通过ID获取EmStockWatch信息
+    @handler getEmStockWatchById
+    post /em_stock_watch (IDInt32Req) returns (EmStockWatchInfoResp)
+}

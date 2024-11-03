@@ -1,0 +1,92 @@
+import "../base.api"
+
+type (
+    // The response data of em financial indicator information | EmFinancialIndicator信息
+    EmFinancialIndicatorInfo {
+        Id        *int32    `json:"id,optional"`
+
+        // FinancialIndicatorsKey
+        FinancialIndicatorsKey  *string `json:"financialIndicatorsKey,optional"`
+
+        // FinancialIndicatorsValue
+        FinancialIndicatorsValue  *string `json:"financialIndicatorsValue,optional"`
+
+        // FinancialIndicatorsName
+        FinancialIndicatorsName  *string `json:"financialIndicatorsName,optional"`
+
+        // CreateTime
+        CreateTime  *int64 `json:"createTime,optional"`
+
+        // Remarks
+        Remarks  *string `json:"remarks,optional"`
+
+        // Status
+        Status  *string `json:"status,optional"`
+    }
+
+    // The response data of em financial indicator list | EmFinancialIndicator信息列表数据
+    EmFinancialIndicatorListResp {
+        BaseDataInfo
+
+        // EmFinancialIndicator list data | EmFinancialIndicator信息列表数据
+        Data EmFinancialIndicatorListInfo `json:"data"`
+    }
+
+    // The em financial indicator list data | EmFinancialIndicator信息列表数据
+    EmFinancialIndicatorListInfo {
+        BaseListInfo
+
+        // The em financial indicator list data | EmFinancialIndicator信息列表数据
+        Data  []EmFinancialIndicatorInfo  `json:"data"`
+    }
+
+    // Get em financial indicator list request params | EmFinancialIndicator列表请求参数
+    EmFinancialIndicatorListReq {
+        PageInfo
+
+        // FinancialIndicatorsKey
+        FinancialIndicatorsKey  *string `json:"financialIndicatorsKey,optional"`
+
+        // FinancialIndicatorsValue
+        FinancialIndicatorsValue  *string `json:"financialIndicatorsValue,optional"`
+
+        // FinancialIndicatorsName
+        FinancialIndicatorsName  *string `json:"financialIndicatorsName,optional"`
+    }
+
+    // The em financial indicator information response | EmFinancialIndicator信息返回体
+    EmFinancialIndicatorInfoResp {
+        BaseDataInfo
+
+        // The em financial indicator information | EmFinancialIndicator信息数据
+        Data EmFinancialIndicatorInfo `json:"data"`
+    }
+)
+
+@server(
+    jwt: Auth
+    group: emfinancialindicator
+    middleware: Authority
+)
+
+service Efinance {
+    // Create em financial indicator information | 创建EmFinancialIndicator信息
+    @handler createEmFinancialIndicator
+    post /em_financial_indicator/create (EmFinancialIndicatorInfo) returns (BaseMsgResp)
+
+    // Update em financial indicator information | 更新EmFinancialIndicator信息
+    @handler updateEmFinancialIndicator
+    post /em_financial_indicator/update (EmFinancialIndicatorInfo) returns (BaseMsgResp)
+
+    // Delete em financial indicator information | 删除EmFinancialIndicator信息
+    @handler deleteEmFinancialIndicator
+    post /em_financial_indicator/delete (IDsInt32Req) returns (BaseMsgResp)
+
+    // Get em financial indicator list | 获取EmFinancialIndicator信息列表
+    @handler getEmFinancialIndicatorList
+    post /em_financial_indicator/list (EmFinancialIndicatorListReq) returns (EmFinancialIndicatorListResp)
+
+    // Get em financial indicator by ID | 通过ID获取EmFinancialIndicator信息
+    @handler getEmFinancialIndicatorById
+    post /em_financial_indicator (IDInt32Req) returns (EmFinancialIndicatorInfoResp)
+}

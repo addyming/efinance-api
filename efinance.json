@@ -1,0 +1,1607 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Description: efinance service",
+    "title": "efinance",
+    "version": "0.0.1"
+  },
+  "host": "localhost:8081",
+  "basePath": "/",
+  "paths": {
+    "/em_financial_indicator": {
+      "post": {
+        "description": "Get em financial indicator by ID | 通过ID获取EmFinancialIndicator信息",
+        "tags": [
+          "emfinancialindicator"
+        ],
+        "summary": "Get em financial indicator by ID | 通过ID获取EmFinancialIndicator信息",
+        "operationId": "GetEmFinancialIndicatorById",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmFinancialIndicatorInfoResp",
+            "schema": {
+              "$ref": "#/definitions/EmFinancialIndicatorInfoResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_financial_indicator/create": {
+      "post": {
+        "description": "Create em financial indicator information | 创建EmFinancialIndicator信息",
+        "tags": [
+          "emfinancialindicator"
+        ],
+        "summary": "Create em financial indicator information | 创建EmFinancialIndicator信息",
+        "operationId": "CreateEmFinancialIndicator",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmFinancialIndicatorInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_financial_indicator/delete": {
+      "post": {
+        "description": "Delete em financial indicator information | 删除EmFinancialIndicator信息",
+        "tags": [
+          "emfinancialindicator"
+        ],
+        "summary": "Delete em financial indicator information | 删除EmFinancialIndicator信息",
+        "operationId": "DeleteEmFinancialIndicator",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDsInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_financial_indicator/list": {
+      "post": {
+        "description": "Get em financial indicator list | 获取EmFinancialIndicator信息列表",
+        "tags": [
+          "emfinancialindicator"
+        ],
+        "summary": "Get em financial indicator list | 获取EmFinancialIndicator信息列表",
+        "operationId": "GetEmFinancialIndicatorList",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmFinancialIndicatorListReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmFinancialIndicatorListResp",
+            "schema": {
+              "$ref": "#/definitions/EmFinancialIndicatorListResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_financial_indicator/update": {
+      "post": {
+        "description": "Update em financial indicator information | 更新EmFinancialIndicator信息",
+        "tags": [
+          "emfinancialindicator"
+        ],
+        "summary": "Update em financial indicator information | 更新EmFinancialIndicator信息",
+        "operationId": "UpdateEmFinancialIndicator",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmFinancialIndicatorInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_basic_info": {
+      "post": {
+        "description": "Get em stock basic info by ID | 通过ID获取EmStockBasicInfo信息",
+        "tags": [
+          "emstockbasicinfo"
+        ],
+        "summary": "Get em stock basic info by ID | 通过ID获取EmStockBasicInfo信息",
+        "operationId": "GetEmStockBasicInfoById",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmStockBasicInfoInfoResp",
+            "schema": {
+              "$ref": "#/definitions/EmStockBasicInfoInfoResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_basic_info/create": {
+      "post": {
+        "description": "Create em stock basic info information | 创建EmStockBasicInfo信息",
+        "tags": [
+          "emstockbasicinfo"
+        ],
+        "summary": "Create em stock basic info information | 创建EmStockBasicInfo信息",
+        "operationId": "CreateEmStockBasicInfo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockBasicInfoInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_basic_info/delete": {
+      "post": {
+        "description": "Delete em stock basic info information | 删除EmStockBasicInfo信息",
+        "tags": [
+          "emstockbasicinfo"
+        ],
+        "summary": "Delete em stock basic info information | 删除EmStockBasicInfo信息",
+        "operationId": "DeleteEmStockBasicInfo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDsInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_basic_info/list": {
+      "post": {
+        "description": "Get em stock basic info list | 获取EmStockBasicInfo信息列表",
+        "tags": [
+          "emstockbasicinfo"
+        ],
+        "summary": "Get em stock basic info list | 获取EmStockBasicInfo信息列表",
+        "operationId": "GetEmStockBasicInfoList",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockBasicInfoListReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmStockBasicInfoListResp",
+            "schema": {
+              "$ref": "#/definitions/EmStockBasicInfoListResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_basic_info/update": {
+      "post": {
+        "description": "Update em stock basic info information | 更新EmStockBasicInfo信息",
+        "tags": [
+          "emstockbasicinfo"
+        ],
+        "summary": "Update em stock basic info information | 更新EmStockBasicInfo信息",
+        "operationId": "UpdateEmStockBasicInfo",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockBasicInfoInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_watch": {
+      "post": {
+        "description": "Get em stock watch by ID | 通过ID获取EmStockWatch信息",
+        "tags": [
+          "emstockwatch"
+        ],
+        "summary": "Get em stock watch by ID | 通过ID获取EmStockWatch信息",
+        "operationId": "GetEmStockWatchById",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmStockWatchInfoResp",
+            "schema": {
+              "$ref": "#/definitions/EmStockWatchInfoResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_watch/create": {
+      "post": {
+        "description": "Create em stock watch information | 创建EmStockWatch信息",
+        "tags": [
+          "emstockwatch"
+        ],
+        "summary": "Create em stock watch information | 创建EmStockWatch信息",
+        "operationId": "CreateEmStockWatch",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockWatchInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_watch/delete": {
+      "post": {
+        "description": "Delete em stock watch information | 删除EmStockWatch信息",
+        "tags": [
+          "emstockwatch"
+        ],
+        "summary": "Delete em stock watch information | 删除EmStockWatch信息",
+        "operationId": "DeleteEmStockWatch",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/IDsInt32Req"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_watch/list": {
+      "post": {
+        "description": "Get em stock watch list | 获取EmStockWatch信息列表",
+        "tags": [
+          "emstockwatch"
+        ],
+        "summary": "Get em stock watch list | 获取EmStockWatch信息列表",
+        "operationId": "GetEmStockWatchList",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockWatchListReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "EmStockWatchListResp",
+            "schema": {
+              "$ref": "#/definitions/EmStockWatchListResp"
+            }
+          }
+        }
+      }
+    },
+    "/em_stock_watch/update": {
+      "post": {
+        "description": "Update em stock watch information | 更新EmStockWatch信息",
+        "tags": [
+          "emstockwatch"
+        ],
+        "summary": "Update em stock watch information | 更新EmStockWatch信息",
+        "operationId": "UpdateEmStockWatch",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/EmStockWatchInfo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    },
+    "/init/database": {
+      "get": {
+        "description": "Initialize database | 初始化数据库",
+        "tags": [
+          "base"
+        ],
+        "summary": "Initialize database | 初始化数据库",
+        "operationId": "InitDatabase",
+        "responses": {
+          "200": {
+            "description": "BaseMsgResp",
+            "schema": {
+              "$ref": "#/definitions/BaseMsgResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "BaseDataInfo": {
+      "description": "The basic response with data | 基础带数据信息",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseIDInfo": {
+      "description": "The base ID response data | 基础ID信息",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseIDInt32Info": {
+      "description": "The base ID response data (int32) | 基础ID信息 (int32)",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseIDInt64Info": {
+      "description": "The base ID response data (int64) | 基础ID信息 (int64)",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseIDStringInfo": {
+      "description": "The base ID response data (string) | 基础ID信息 (string)",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "string",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseIDUint32Info": {
+      "description": "The base ID response data (uint32) | 基础ID信息 (uint32)",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseListInfo": {
+      "description": "The basic response with data | 基础带数据信息",
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data"
+        },
+        "total": {
+          "description": "The total number of data | 数据总数",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Total"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseMsgResp": {
+      "description": "The basic response without data | 基础不带数据信息",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "BaseUUIDInfo": {
+      "description": "The base UUID response data | 基础UUID信息",
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "description": "Create date | 创建日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreatedAt"
+        },
+        "id": {
+          "description": "ID",
+          "type": "string",
+          "x-go-name": "Id"
+        },
+        "updatedAt": {
+          "description": "Update date | 更新日期",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UpdatedAt"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmFinancialIndicatorInfo": {
+      "description": "The response data of em financial indicator information | EmFinancialIndicator信息",
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "description": "CreateTime",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreateTime"
+        },
+        "financialIndicatorsKey": {
+          "description": "FinancialIndicatorsKey",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsKey"
+        },
+        "financialIndicatorsName": {
+          "description": "FinancialIndicatorsName",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsName"
+        },
+        "financialIndicatorsValue": {
+          "description": "FinancialIndicatorsValue",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsValue"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Id"
+        },
+        "remarks": {
+          "description": "Remarks",
+          "type": "string",
+          "x-go-name": "Remarks"
+        },
+        "status": {
+          "description": "Status",
+          "type": "string",
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmFinancialIndicatorInfoResp": {
+      "description": "The em financial indicator information response | EmFinancialIndicator信息返回体",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmFinancialIndicatorInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmFinancialIndicatorListInfo": {
+      "description": "The em financial indicator list data | EmFinancialIndicator信息列表数据",
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "The em financial indicator list data | EmFinancialIndicator信息列表数据",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmFinancialIndicatorInfo"
+          },
+          "x-go-name": "Data"
+        },
+        "total": {
+          "description": "The total number of data | 数据总数",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Total"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmFinancialIndicatorListReq": {
+      "description": "Get em financial indicator list request params | EmFinancialIndicator列表请求参数",
+      "type": "object",
+      "required": [
+        "page",
+        "pageSize"
+      ],
+      "properties": {
+        "financialIndicatorsKey": {
+          "description": "FinancialIndicatorsKey",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsKey"
+        },
+        "financialIndicatorsName": {
+          "description": "FinancialIndicatorsName",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsName"
+        },
+        "financialIndicatorsValue": {
+          "description": "FinancialIndicatorsValue",
+          "type": "string",
+          "x-go-name": "FinancialIndicatorsValue"
+        },
+        "page": {
+          "description": "Page number | 第几页",
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0,
+          "x-go-name": "Page"
+        },
+        "pageSize": {
+          "description": "Page size | 单页数据行数",
+          "type": "integer",
+          "format": "uint64",
+          "maximum": 100000,
+          "x-go-name": "PageSize"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmFinancialIndicatorListResp": {
+      "description": "The response data of em financial indicator list | EmFinancialIndicator信息列表数据",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmFinancialIndicatorListInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockBasicInfoInfo": {
+      "description": "The response data of em stock basic info information | EmStockBasicInfo信息",
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "description": "CreateTime",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "CreateTime"
+        },
+        "f1": {
+          "description": "F1",
+          "type": "string",
+          "x-go-name": "F1"
+        },
+        "f10": {
+          "description": "F10",
+          "type": "string",
+          "x-go-name": "F10"
+        },
+        "f11": {
+          "description": "F11",
+          "type": "string",
+          "x-go-name": "F11"
+        },
+        "f12": {
+          "description": "F12",
+          "type": "string",
+          "x-go-name": "F12"
+        },
+        "f13": {
+          "description": "F13",
+          "type": "string",
+          "x-go-name": "F13"
+        },
+        "f14": {
+          "description": "F14",
+          "type": "string",
+          "x-go-name": "F14"
+        },
+        "f15": {
+          "description": "F15",
+          "type": "string",
+          "x-go-name": "F15"
+        },
+        "f16": {
+          "description": "F16",
+          "type": "string",
+          "x-go-name": "F16"
+        },
+        "f17": {
+          "description": "F17",
+          "type": "string",
+          "x-go-name": "F17"
+        },
+        "f18": {
+          "description": "F18",
+          "type": "string",
+          "x-go-name": "F18"
+        },
+        "f19": {
+          "description": "F19",
+          "type": "string",
+          "x-go-name": "F19"
+        },
+        "f2": {
+          "description": "F2",
+          "type": "string",
+          "x-go-name": "F2"
+        },
+        "f20": {
+          "description": "F20",
+          "type": "string",
+          "x-go-name": "F20"
+        },
+        "f21": {
+          "description": "F21",
+          "type": "string",
+          "x-go-name": "F21"
+        },
+        "f22": {
+          "description": "F22",
+          "type": "string",
+          "x-go-name": "F22"
+        },
+        "f23": {
+          "description": "F23",
+          "type": "string",
+          "x-go-name": "F23"
+        },
+        "f24": {
+          "description": "F24",
+          "type": "string",
+          "x-go-name": "F24"
+        },
+        "f25": {
+          "description": "F25",
+          "type": "string",
+          "x-go-name": "F25"
+        },
+        "f26": {
+          "description": "F26",
+          "type": "string",
+          "x-go-name": "F26"
+        },
+        "f27": {
+          "description": "F27",
+          "type": "string",
+          "x-go-name": "F27"
+        },
+        "f28": {
+          "description": "F28",
+          "type": "string",
+          "x-go-name": "F28"
+        },
+        "f29": {
+          "description": "F29",
+          "type": "string",
+          "x-go-name": "F29"
+        },
+        "f3": {
+          "description": "F3",
+          "type": "string",
+          "x-go-name": "F3"
+        },
+        "f30": {
+          "description": "F30",
+          "type": "string",
+          "x-go-name": "F30"
+        },
+        "f4": {
+          "description": "F4",
+          "type": "string",
+          "x-go-name": "F4"
+        },
+        "f5": {
+          "description": "F5",
+          "type": "string",
+          "x-go-name": "F5"
+        },
+        "f6": {
+          "description": "F6",
+          "type": "string",
+          "x-go-name": "F6"
+        },
+        "f7": {
+          "description": "F7",
+          "type": "string",
+          "x-go-name": "F7"
+        },
+        "f8": {
+          "description": "F8",
+          "type": "string",
+          "x-go-name": "F8"
+        },
+        "f9": {
+          "description": "F9",
+          "type": "string",
+          "x-go-name": "F9"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Id"
+        },
+        "remarks": {
+          "description": "Remarks",
+          "type": "string",
+          "x-go-name": "Remarks"
+        },
+        "st1": {
+          "description": "St1",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "St1"
+        },
+        "st2": {
+          "description": "St2",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "St2"
+        },
+        "st3": {
+          "description": "St3",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "St3"
+        },
+        "st4": {
+          "description": "St4",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "St4"
+        },
+        "st5": {
+          "description": "St5",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "St5"
+        },
+        "status": {
+          "description": "Status",
+          "type": "string",
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockBasicInfoInfoResp": {
+      "description": "The em stock basic info information response | EmStockBasicInfo信息返回体",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmStockBasicInfoInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockBasicInfoListInfo": {
+      "description": "The em stock basic info list data | EmStockBasicInfo信息列表数据",
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "The em stock basic info list data | EmStockBasicInfo信息列表数据",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmStockBasicInfoInfo"
+          },
+          "x-go-name": "Data"
+        },
+        "total": {
+          "description": "The total number of data | 数据总数",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Total"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockBasicInfoListReq": {
+      "description": "Get em stock basic info list request params | EmStockBasicInfo列表请求参数",
+      "type": "object",
+      "required": [
+        "page",
+        "pageSize"
+      ],
+      "properties": {
+        "page": {
+          "description": "Page number | 第几页",
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0,
+          "x-go-name": "Page"
+        },
+        "pageSize": {
+          "description": "Page size | 单页数据行数",
+          "type": "integer",
+          "format": "uint64",
+          "maximum": 100000,
+          "x-go-name": "PageSize"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockBasicInfoListResp": {
+      "description": "The response data of em stock basic info list | EmStockBasicInfo信息列表数据",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmStockBasicInfoListInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockWatchInfo": {
+      "description": "The response data of em stock watch information | EmStockWatch信息",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Id"
+        },
+        "stockWatchCode": {
+          "description": "StockWatchCode",
+          "type": "string",
+          "x-go-name": "StockWatchCode"
+        },
+        "stockWatchFallChange": {
+          "description": "StockWatchFallChange",
+          "type": "string",
+          "x-go-name": "StockWatchFallChange"
+        },
+        "stockWatchFallPrice": {
+          "description": "StockWatchFallPrice",
+          "type": "string",
+          "x-go-name": "StockWatchFallPrice"
+        },
+        "stockWatchName": {
+          "description": "StockWatchName",
+          "type": "string",
+          "x-go-name": "StockWatchName"
+        },
+        "stockWatchUpChange": {
+          "description": "StockWatchUpChange",
+          "type": "string",
+          "x-go-name": "StockWatchUpChange"
+        },
+        "stockWatchUpPrice": {
+          "description": "StockWatchUpPrice",
+          "type": "string",
+          "x-go-name": "StockWatchUpPrice"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockWatchInfoResp": {
+      "description": "The em stock watch information response | EmStockWatch信息返回体",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmStockWatchInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockWatchListInfo": {
+      "description": "The em stock watch list data | EmStockWatch信息列表数据",
+      "type": "object",
+      "properties": {
+        "data": {
+          "description": "The em stock watch list data | EmStockWatch信息列表数据",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EmStockWatchInfo"
+          },
+          "x-go-name": "Data"
+        },
+        "total": {
+          "description": "The total number of data | 数据总数",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Total"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockWatchListReq": {
+      "description": "Get em stock watch list request params | EmStockWatch列表请求参数",
+      "type": "object",
+      "required": [
+        "page",
+        "pageSize"
+      ],
+      "properties": {
+        "page": {
+          "description": "Page number | 第几页",
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0,
+          "x-go-name": "Page"
+        },
+        "pageSize": {
+          "description": "Page size | 单页数据行数",
+          "type": "integer",
+          "format": "uint64",
+          "maximum": 100000,
+          "x-go-name": "PageSize"
+        },
+        "stockWatchCode": {
+          "description": "StockWatchCode",
+          "type": "string",
+          "x-go-name": "StockWatchCode"
+        },
+        "stockWatchName": {
+          "description": "StockWatchName",
+          "type": "string",
+          "x-go-name": "StockWatchName"
+        },
+        "stockWatchUpPrice": {
+          "description": "StockWatchUpPrice",
+          "type": "string",
+          "x-go-name": "StockWatchUpPrice"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "EmStockWatchListResp": {
+      "description": "The response data of em stock watch list | EmStockWatch信息列表数据",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "Error code | 错误代码",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Code"
+        },
+        "data": {
+          "description": "Data | 数据",
+          "type": "string",
+          "x-go-name": "Data",
+          "$ref": "#/definitions/EmStockWatchListInfo"
+        },
+        "msg": {
+          "description": "Message | 提示信息",
+          "type": "string",
+          "x-go-name": "Msg"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDInt32PathReq": {
+      "description": "Basic ID request (int32) | 基础ID地址参数请求 (int32)",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDInt32Req": {
+      "description": "Basic ID request (int32) | 基础ID参数请求 (int32)",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int32",
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDInt64PathReq": {
+      "description": "Basic ID request (int64) | 基础ID地址参数请求 (int64)",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDInt64Req": {
+      "description": "Basic ID request (int64) | 基础ID参数请求 (int64)",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDPathReq": {
+      "description": "Basic ID request | 基础ID地址参数请求",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint64"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDReq": {
+      "description": "Basic ID request | 基础ID参数请求",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint64",
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDStringPathReq": {
+      "description": "Basic ID request (string) | 基础ID地址参数请求 (string)",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "string"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDStringReq": {
+      "description": "Basic ID request (string) | 基础ID参数请求 (string)",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "string",
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDUint32PathReq": {
+      "description": "Basic ID request (uint32) | 基础ID地址参数请求 (uint32)",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint32"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDUint32Req": {
+      "description": "Basic ID request (uint32) | 基础ID参数请求 (uint32)",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "integer",
+          "format": "uint32",
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDsInt32Req": {
+      "description": "Basic IDs request (int32) | 基础ID数组参数请求 (int32)",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "IDs",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDsInt64Req": {
+      "description": "Basic IDs request (int64) | 基础ID数组参数请求 (int64)",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "IDs",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDsReq": {
+      "description": "Basic IDs request | 基础ID数组参数请求",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "IDs",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDsStringReq": {
+      "description": "Basic IDs request (string) | 基础ID数组参数请求 (string)",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "IDs",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "IDsUint32Req": {
+      "description": "Basic IDs request (uint32) | 基础ID数组参数请求 (uint32)",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "IDs",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "PageInfo": {
+      "description": "The page request parameters | 列表请求参数",
+      "type": "object",
+      "required": [
+        "page",
+        "pageSize"
+      ],
+      "properties": {
+        "page": {
+          "description": "Page number | 第几页",
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0,
+          "x-go-name": "Page"
+        },
+        "pageSize": {
+          "description": "Page size | 单页数据行数",
+          "type": "integer",
+          "format": "uint64",
+          "maximum": 100000,
+          "x-go-name": "PageSize"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "UUIDPathReq": {
+      "description": "Basic UUID request in path | 基础UUID地址参数请求",
+      "type": "object",
+      "required": [
+        "Id"
+      ],
+      "properties": {
+        "Id": {
+          "description": "ID",
+          "type": "string"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "UUIDReq": {
+      "description": "Basic UUID request | 基础UUID参数请求",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "description": "ID",
+          "type": "string",
+          "maxLength": 36,
+          "minLength": 36,
+          "x-go-name": "Id"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    },
+    "UUIDsReq": {
+      "description": "Basic UUID array request | 基础UUID数组参数请求",
+      "type": "object",
+      "required": [
+        "ids"
+      ],
+      "properties": {
+        "ids": {
+          "description": "Ids",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "Ids"
+        }
+      },
+      "x-go-package": "github.com/suyuan32/simple-admin-efinance-api/internal/types"
+    }
+  },
+  "securityDefinitions": {
+    "Token": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "security": [
+    {
+      "Token": []
+    }
+  ]
+}
